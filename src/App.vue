@@ -1,28 +1,64 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <dv-full-screen-container class="dv-full">
+      <el-container>
+        <el-header height="15%">
+        
+          <SubwayHeader>
+          </SubwayHeader>
+        </el-header>
+      <el-main>
+        
+       
+        <router-view></router-view>
+        
+        
+      </el-main>
+    </el-container>
+    </dv-full-screen-container>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import MapContainer from './components/MapContainer.vue'
+import SubwayHeader from './views/SubwayHeader.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    
+    SubwayHeader
+  },
+ 
 }
+
+
+
+
+
+
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+
+#app{
+  width: 100%;
+  height: 100%;
 }
+.el-header{
+  padding: 0 !important;
+}
+.el-container{
+  height: 100%;
+
+}
+
+
+.dv-full{
+  background : url("./assets/Images/bg.png ") no-repeat; 
+  
+}
+
 </style>
